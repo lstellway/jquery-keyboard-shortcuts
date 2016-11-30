@@ -95,20 +95,61 @@ body {
         <div class="btn"></div>
     </div>
     <div class="content">
-        <h2>What is Lorem Ipsum?</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <h2>Try It Out</h2>
+        <p>Try the following keyboard shortcuts in your browser window:</p>
+        <p>
+            <ul>
+                <li><pre>Shift + Up Arrow</pre></li>
+                <li><pre>Shift + Down Arrow</pre></li>
+                <li><pre>Shift + Left Arrow</pre></li>
+                <li><pre>Shift + Right Arrow</pre></li>
+                <li><pre>Shift + U</pre></li>
+                <li><pre>Shift + I</pre></li>
+                <li><pre>Shift + J</pre></li>
+                <li><pre>Shift + K</pre></li>
+                <li><pre>Shift + C</pre></li>
+                <li><pre>Shift + Enter</pre></li>
+            </ul>
+        </p>
         <p>&nbsp;</p>
 
-        <h2>Why do we use it?</h2>
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        <h2>What is this?</h2>
+        <p>This is an example of manipulating window position using keyboard shortcuts similar to the mac application <a href="http://magnet.crowdcafe.com/" target="_blank">Magnet</a>. This jQuery plugin binds keyboard shortcut events to the window element and when a key combination is pressed, an event is triggered following that keyboard shortcut.</p>
         <p>&nbsp;</p>
 
-        <h2>What is Lorem Ipsum?</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <h2>Options</h2>
+        <p>
+            <ul>
+                <li><b>debug</b> (boolean)
+                    <ul>
+                        <li>This option will log the keyboard shortcuts being executed in the console as they are triggered.</li>
+                    </ul>
+                </li>
+            </ul>
+        </p>
         <p>&nbsp;</p>
 
-        <h2>Why do we use it?</h2>
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        <h2>Get Started</h2>
+        <p>
+            <ol>
+                <li>Include jQuery</li>
+                <li>Include Keyboard Shortcuts jQuery Plugin</li>
+                <li>Initialize
+                    <ul>
+                        <li><pre>$(window).initKeyboard()</pre></li>
+                    </ul>
+                </li>
+                <li>Add events
+                    <ul>
+<li> <pre>
+$(window).on('Shift+▶', function(){
+    // Execute function here
+});
+</pre> </li>
+                    </ul>
+                </li>
+            </ol>
+        </p>
         <p>&nbsp;</p>
     </div>
 </div>
@@ -121,14 +162,14 @@ body {
 }(function($, document, window){
     $(function(){
         $(window)
-        .initKeyboard()
-        .on('Shift+Arr▲', function(){
+        .initKeyboard({debug:1})
+        .on('Shift+▲', function(){
             $('#window').attr('class','h-50');
-        }).on('Shift+Arr▼', function(){
+        }).on('Shift+▼', function(){
             $('#window').attr('class','h-50 p-b');
-        }).on('Shift+Arr◀', function(){
+        }).on('Shift+◀', function(){
             $('#window').attr('class','w-50');
-        }).on('Shift+Arr▶', function(){
+        }).on('Shift+▶', function(){
             $('#window').attr('class','w-50 p-r');
         }).on('Enter+Shift', function(){
             $('#window').attr('class','');

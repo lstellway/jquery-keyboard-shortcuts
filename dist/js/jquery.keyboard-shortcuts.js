@@ -10,10 +10,10 @@
                 'Dead': '',
                 'Meta': 'Cmd',
                 'Control': 'Ctrl',
-                'Arrowup': 'Arr▲',
-                'Arrowdown': 'Arr▼',
-                'Arrowleft': 'Arr◀',
-                'Arrowright': 'Arr▶'
+                'Arrowup': '▲',
+                'Arrowdown': '▼',
+                'Arrowleft': '◀',
+                'Arrowright': '▶'
             },
 
             // Return key combo
