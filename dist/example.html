@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>jQuery Keyboard Shortcuts</title>
+
+<style type="text/css">
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#window {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #eee;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+}
+#window.h-50 {
+    height: 50%;
+}
+#window.w-50 {
+    width: 50%;
+}
+#window.p-b {
+    top: auto;
+    bottom: 0;
+}
+#window.p-r {
+    left: auto;
+    right: 0;
+}
+#window.c {
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%,-50%);
+}
+
+.toolbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    padding: 5px 10px;
+    background: #ccc;
+    position: absolute;
+    box-sizing: border-box;
+
+    background: #ededed;
+    background: -moz-linear-gradient(top, #ededed 0%, #d3d3d3 100%);
+    background: -webkit-linear-gradient(top, #ededed 0%,#d3d3d3 100%);
+    background: linear-gradient(to bottom, #ededed 0%,#d3d3d3 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#d3d3d3', GradientType=0);
+}
+.btn {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background: #ccc;
+    border-radius: 50%;
+    vertical-align: top;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 2.5px 2.5px 0 0;
+    background: #afafaf;
+    border: 1px solid #aaa;
+}
+.content {
+    top: 30px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    padding: 40px 80px;
+    position: absolute;
+}
+</style>
+</head>
+<body>
+
+<div id="window" class="w-50 h-50 c">
+    <div class="toolbar">
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+    </div>
+    <div class="content">
+        <h2>What is Lorem Ipsum?</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>&nbsp;</p>
+
+        <h2>Why do we use it?</h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        <p>&nbsp;</p>
+
+        <h2>What is Lorem Ipsum?</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <p>&nbsp;</p>
+
+        <h2>Why do we use it?</h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        <p>&nbsp;</p>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.keyboard-shortcuts.js"></script>
+<script type="text/javascript">
+(function(code){
+    code(window.jQuery, document, window);
+}(function($, document, window){
+    $(function(){
+        $(window)
+        .initKeyboard()
+        .on('Shift+Arr▲', function(){
+            $('#window').attr('class','h-50');
+        }).on('Shift+Arr▼', function(){
+            $('#window').attr('class','h-50 p-b');
+        }).on('Shift+Arr◀', function(){
+            $('#window').attr('class','w-50');
+        }).on('Shift+Arr▶', function(){
+            $('#window').attr('class','w-50 p-r');
+        }).on('Enter+Shift', function(){
+            $('#window').attr('class','');
+        }).on('Shift+U', function(){
+            $('#window').attr('class','w-50 h-50');
+        }).on('Shift+I', function(){
+            $('#window').attr('class','w-50 h-50 p-r');
+        }).on('Shift+J', function(){
+            $('#window').attr('class','w-50 h-50 p-b');
+        }).on('Shift+K', function(){
+            $('#window').attr('class','w-50 h-50 p-b p-r');
+        }).on('Shift+C', function(){
+            $('#window').addClass('c');
+        });
+    });
+}));
+</script>
+
+</body>
+</html>
