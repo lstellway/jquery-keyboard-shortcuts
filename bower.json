@@ -5,7 +5,7 @@
   "authors": [
     "Logan Stellway <loganstellway@gmail.com>"
   ],
-  "description": "jQuery plugin that binds keyboard shortcuts to events",
+  "description": "jQuery plugin that creates events that are triggered by keyboard combinations",
   "moduleType": [
     "amd"
   ],
