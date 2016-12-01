@@ -18,7 +18,7 @@ jQuery plugin that creates events triggered by keyboard combinations
 **Initialize**
 ```
 <script type="text/javascript">
-$(window).initKeyboard()
+$(window).initKeyboard();
 </script>
 ```
 **Add events**
