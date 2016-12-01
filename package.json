@@ -1,0 +1,24 @@
+{
+  "name": "jquery-keyboard-shortcuts",
+  "version": "1.0.0",
+  "description": "jQuery plugin that creates events that are triggered by keyboard combinations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loganstellway/jquery-keyboard-shortcuts.git"
+  },
+  "keywords": [
+    "jquery",
+    "keyboard",
+    "shortcuts"
+  ],
+  "author": "Logan Stellway <loganstellway@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loganstellway/jquery-keyboard-shortcuts/issues"
+  },
+  "homepage": "https://github.com/loganstellway/jquery-keyboard-shortcuts#readme"
+}
