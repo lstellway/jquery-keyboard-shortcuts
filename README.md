@@ -5,6 +5,16 @@ jQuery plugin that creates events triggered by keyboard combinations
 - **debug** ([boolean](https://api.jquery.com/Types/#Boolean))
     - This option will log the keyboard shortcuts being executed in the console as they are triggered.
 
+## Install with Bower
+```
+bower install --save jquery-keyboard-shortcuts
+```
+
+## Install with NPM
+```
+npm i jquery-keyboard-shortcuts
+```
+
 ## Get Started
 
 **Include jQuery**
